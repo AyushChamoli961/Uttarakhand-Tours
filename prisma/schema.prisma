@@ -1,0 +1,156 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id              Int              @id @default(autoincrement())
+  userId          String           @unique
+  name            String
+  email           String           @unique
+  phone           String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  inquiries       Inquiry[]
+  packageBookings PackageBooking[]
+  reviews         Review[]
+}
+
+model Package {
+  id                 Int                  @id @default(autoincrement())
+  title              String
+  description        String
+  itinerary          String
+  price              Decimal              @db.Decimal(10, 2)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  tripType           TripType
+  dates              DateTime[]           @default(dbgenerated("(ARRAY[]::timestamp without time zone[])::timestamp(3) without time zone[]"))
+  duration_in_days   Int                  @default(0)
+  duration_in_nights Int                  @default(0)
+  images             Image[]
+  availability       PackageAvailability?
+  bookings           PackageBooking[]
+  reviews            Review[]
+
+  @@map("packages")
+}
+
+model PackageAvailability {
+  id            Int     @id @default(autoincrement())
+  packageId     Int     @unique
+  year          Int
+  month         Int
+  availableDays Int[]
+  package       Package @relation(fields: [packageId], references: [id], onDelete: Cascade)
+
+  @@map("package_availability")
+}
+
+model Review {
+  id                Int      @id @default(autoincrement())
+  userId            String
+  packageId         Int
+  accomodations Int
+  meal  Int
+  service     Int
+  reviewText        String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  package           Package  @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  user              User     @relation(fields: [userId], references: [userId], onDelete: Cascade)
+
+  @@map("reviews")
+}
+
+model Inquiry {
+  id          Int           @id @default(autoincrement())
+  userId      Int
+  inquiryType InquiryType   @default(GENERAL)
+  relatedId   Int?
+  inquiryText String
+  status      InquiryStatus @default(PENDING)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("inquiries")
+}
+
+model Image {
+  id        String   @id @default(uuid())
+  packageId Int
+  url       String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  package   Package?  @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  @@index([packageId])
+}
+
+
+model PackageBooking {
+  id            String        @id @default(uuid())
+  userId        String
+  packageId     Int
+  startDate     DateTime
+  endDate       DateTime
+  status        BookingStatus @default(PENDING)
+  paymentStatus PaymentStatus @default(UNPAID)
+  orderId       String        @unique
+  paymentId     String?
+  phone         String     @default("")
+  amountPaid    Int           @default(0)
+  persons       Int           @default(1)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  package       Package       @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  user          User          @relation(fields: [userId], references: [userId], onDelete: Cascade)
+
+  @@map("package_bookings")
+}
+
+
+
+
+enum TripType {
+  TOUR
+  TREK
+}
+
+enum InquiryType {
+  GENERAL
+  TOUR
+  TREK
+}
+
+enum InquiryStatus {
+  PENDING
+  IN_PROGRESS
+  RESPONDED
+  CLOSED
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  UNPAID // payment not authorized
+  AUTHORIZED // payment authorized but not captured that is amount is deducted from user account but not credited to our account
+  PAID // payment authorized and captured   
+  FAILED
+  REFUNDED
+}
