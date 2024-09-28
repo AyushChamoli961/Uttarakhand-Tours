@@ -23,7 +23,7 @@ export default function NavbarWithModal() {
                     <div className="bg-white py-6 px-8 rounded-lg relative flex justify-center items-center flex-col border shadow-xl">
                         <h1 className="text-[#00247D] font-bold text-[24px] mb-4">
                             {showSignIn ? "Login to " : "Sign Up for "}
-                            <b className="font-bold text-yellow-300">Fly</b>Elite
+                            <b className="font-bold">Uttarakhand Tours</b>
                         </h1>
                         {showSignIn ? (
                             <SignIn

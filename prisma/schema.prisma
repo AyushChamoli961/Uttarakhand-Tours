@@ -97,7 +97,29 @@ model Image {
   package   Package?  @relation(fields: [packageId], references: [id], onDelete: Cascade)
   @@index([packageId])
 }
+model Hotel {
+  id              Int      @id @default(autoincrement())
+  name            String
+  images          HotelImage[]
+  address         String
+  city            String
+  state           String
+  country         String
+  price           Int
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 
+  @@map("hotels")
+}
+model HotelImage {
+  id        String   @id @default(uuid())
+  hotelId   Int
+  url       String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  hotel     Hotel    @relation(fields: [hotelId], references: [id], onDelete: Cascade)
+  @@index([hotelId])
+}
 
 model PackageBooking {
   id            String        @id @default(uuid())

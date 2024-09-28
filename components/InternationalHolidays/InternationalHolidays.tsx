@@ -50,7 +50,7 @@ export default function InternationalHolidays({ packages }: packagePropsTypeForD
         <div className="flex items-center justify-center w-full mb-4">
         <h1 className="font-heading font-bold text-center 
                 text-2xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl">
-          International Holidays
+          Mountain Treks
           </h1>
           {/* Buttons visible on laptop and above */}
           <div className="hidden md:flex space-x-2 absolute right-14  pr-6">

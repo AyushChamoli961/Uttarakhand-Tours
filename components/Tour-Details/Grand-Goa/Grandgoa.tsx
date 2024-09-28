@@ -368,7 +368,6 @@ export default function Grandgoa({ tour, activeuser }: TourProps) {
             <hr className=" border-dashed border-slate-300" />
           </div>
 
-          {/* Day-1  */}
           <div
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(tour.itinerary),

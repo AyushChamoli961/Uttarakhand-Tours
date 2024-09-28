@@ -167,11 +167,11 @@ import { packagePropsType } from "@/utils/pacakageTypes";
 const dealsType = [
   {
     id: 0,
-    name: "DOMESTIC",
+    name: "TOUR",
   },
   {
     id: 1,
-    name: "INTERNATIONAL",
+    name: "TREK",
   },
 ];
 

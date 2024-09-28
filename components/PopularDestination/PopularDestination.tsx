@@ -56,15 +56,15 @@ const PopularDestination = ({ destinations }: any) => {
           <div className="lg:hidden relative flex justify-center items-center mx-1 w-full">
             <div className="w-full">
               <Image
-                src={visibleDestinations[0].images[0].url}
-                alt={visibleDestinations[0].title}
+                src={visibleDestinations[0]?.images[0].url}
+                alt={visibleDestinations[0]?.title}
                 width={400}
                 height={250}
                 className="rounded-lg object-cover w-full h-[16rem]"
               />
               <div className="absolute inset-0 flex flex-col rounded-lg items-center justify-center bg-black bg-opacity-50 text-white p-4">
                 <Link
-                  href={`/tour/${visibleDestinations[0].id}`}
+                  href={`/tour/${visibleDestinations[0]?.id}`}
                   className="p-2 px-4 py-1 text-white border border-white rounded-md"
                 >
                   EXPLORE ALL
@@ -92,11 +92,11 @@ const PopularDestination = ({ destinations }: any) => {
                 <span className="flex-1 border-[#00247D] mr-32" style={{ borderTopWidth: '3px' }}></span>
               </div>
               <p className="text-2xl font-bold text-start mt-2">
-                {visibleDestinations[selectedIndex].title}
+                {visibleDestinations[selectedIndex]?.title}
               </p>
             </h1>
             <p className="mt-4 text-start">
-              {visibleDestinations[selectedIndex].description}
+              {visibleDestinations[selectedIndex]?.description}
             </p>
             <div className="mt-4 flex justify-between sm:justify-start sm:gap-4 text-[#00247D]">
               <button
@@ -122,8 +122,8 @@ const PopularDestination = ({ destinations }: any) => {
                 onClick={() => handleImageClick(index)}
               >
                 <Image
-                  src={destination.images[0].url}
-                  alt={destination.title}
+                  src={destination?.images[0].url}
+                  alt={destination?.title}
                   width={450}
                   height={900}
                   className={`rounded-lg object-cover h-[23.5rem] transition-all duration-500 ${index === selectedIndex ? "w-[15.8rem]" : "w-[10.6rem]"
@@ -132,11 +132,11 @@ const PopularDestination = ({ destinations }: any) => {
                 {index === selectedIndex && (
                   <div className="absolute inset-0 flex flex-col rounded-lg items-center justify-center bg-black bg-opacity-70 text-white p-4 transition-opacity duration-500">
                     <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2">
-                      {destination.title}
+                      {destination?.title}
                     </h2>
                     <p className="text-lg mb-4">3+ trips</p>
                     <Link
-                      href={`/tour/${destination.id}`}
+                      href={`/tour/${destination?.id}`}
                       className="p-2 md:px-4 py-1 lg:px-6 lg:py-2 text-white border border-white rounded-md"
                     >
                       Explore All

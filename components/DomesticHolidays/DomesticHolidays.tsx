@@ -55,7 +55,7 @@ export default function DomesticHolidays({
             className="font-heading font-bold text-center 
                 text-2xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl"
           >
-            Domestic Holidays
+            Religious Tours
           </h1>
           {/* Buttons visible on laptop and above */}
           <div className="hidden md:flex space-x-2 absolute right-20  pr-9">

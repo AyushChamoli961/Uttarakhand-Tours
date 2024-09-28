@@ -94,7 +94,7 @@
 // }
 // import Image from 'next/image';
 import Image from 'next/image';
-import logo from '@/public/assets/Footer/logo.png';
+import logo from '@/public/ut-logo.png';
 import { IoIosPhonePortrait } from 'react-icons/io';
 import { CiLocationOn, CiStopwatch } from 'react-icons/ci';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -154,7 +154,7 @@ export default function Footer() {
         </div>
 
         {/* Third Group */}
-        <div className="lg:w-3/12 lg:flex lg:flex-col lg:justify-center font-text space-y-3">
+        {/* <div className="lg:w-3/12 lg:flex lg:flex-col lg:justify-center font-text space-y-3">
           <h1 className="font-heading font-bold">Recent Trips</h1>
           <div className='grid grid-cols-3 gap-3 grid-rows-2'>
             <div className='rounded-lg'>
@@ -176,7 +176,7 @@ export default function Footer() {
               <Image src={Fimg6} alt="img6" className='rounded-lg' />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <hr className="border-black w-10/12 mx-auto my-[2rem]" />
       <div className="w-10/12 mx-auto flex lg:justify-between justify-center items-center font-text">
