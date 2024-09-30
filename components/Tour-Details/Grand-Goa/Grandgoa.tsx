@@ -197,7 +197,7 @@ export default function TourDetails({ tour, activeuser }: TourProps) {
     }
     try {
       const response = await axios.post(
-        "https://fly-elite-admin.vercel.app/api/order",
+        "https://tulas-hackathon-backend.vercel.app/api/order",
         {
           amount: person * parseInt(tour.price.toString()) * 100,
           currency: "INR",
@@ -263,7 +263,7 @@ export default function TourDetails({ tour, activeuser }: TourProps) {
           };
           try {
             const result = await axios.post(
-              "https://fly-elite-admin.vercel.app/api/verify",
+              "https://tulas-hackathon-backend.vercel.app/api/verify",
               data,
               {
                 headers: { "Content-Type": "application/json" },

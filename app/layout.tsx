@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     title: "Uttarakhand Tours - Discover Your Next Adventure",
     description:
       "Discover your next adventure with Uttarakhand Tours. We offer unforgettable tours and unbeatable experiences. Enquire now!",
-    url: "https://flyelite.co.in",
     type: "website",
   },
   twitter: {

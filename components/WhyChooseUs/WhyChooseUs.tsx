@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 // import img1 from '@/assets/WhyChooseUsImages/services1.png';
 // import img2 from '@/assets/WhyChooseUsImages/services2.png';
 // import expLogo from '@/assets/WhyChooseUsImages/experience-logo.png';
@@ -22,12 +22,19 @@ export default function WhyChooseUs() {
           <div className="flex justify-between items-center">
             {/* card */}
             <div className="w-3/12 flex flex-col gap-3 item-center justify-center text-center">
-              <Image src={'/experience-logo.png'} width={60} height={60} alt="logo" className="size-[60px] mx-auto" />
+              <Image
+                src={"/experience-logo.png"}
+                width={60}
+                height={60}
+                alt="logo"
+                className="size-[60px] mx-auto"
+              />
               <h1 className="font-heading font-semibold">
                 Unforgettable experiences
               </h1>
               <p className="font-text">
-                Crafting personalized itineraries that cater to your unique preferences.
+                Crafting personalized itineraries that cater to your unique
+                preferences.
               </p>
             </div>
             {/* Image-Section */}
@@ -66,13 +73,17 @@ export default function WhyChooseUs() {
             {/* information */}
             <div className="w-3/12 space-y-4">
               <p className="font-text">
-                Tailored for Indian Travelers: We understand the preferences and needs of Indian travelers, ensuring a comfortable and enjoyable experience.
+                Tailored for Indian Travelers: We understand the preferences and
+                needs of Indian travelers, ensuring a comfortable and enjoyable
+                experience.
               </p>
               <p className="font-text">
-                Expert Guides: Our knowledgeable guides provide insights into the rich history and culture of Scotland
+                Expert Guides: Our knowledgeable guides provide insights into
+                the rich history and culture of Scotland
               </p>
               <p className="font-text">
-                Hassle-Free Booking: Easy and convenient booking process with dedicated customer support.
+                Hassle-Free Booking: Easy and convenient booking process with
+                dedicated customer support.
               </p>
             </div>
           </div>
@@ -81,28 +92,52 @@ export default function WhyChooseUs() {
           <div className="flex justify-between mt-[3rem]">
             {/* Card-1 */}
             <div className="w-2/12 flex flex-col gap-3 item-center justify-center text-center relative top-[-5rem]">
-              <Image src={'/diverse.png'} width={60} height={60} alt="logo" className="size-[60px] mx-auto" />
-              <h1 className="font-heading font-semibold">Diverse Destinations</h1>
+              <Image
+                src={"/diverse.png"}
+                width={60}
+                height={60}
+                alt="logo"
+                className="size-[60px] mx-auto"
+              />
+              <h1 className="font-heading font-semibold">
+                Diverse Destinations
+              </h1>
               <p className="font-text">
-                Curating exclusive destinations and activities across Incredible India for The Elite Community
+                Curating exclusive destinations and activities across Incredible
+                India for The Elite Community
               </p>
             </div>
 
             {/* Card-2 */}
             <div className="w-2/12 flex flex-col gap-3 item-center justify-center text-center">
-              <Image src={'/money.png'} width={60} height={60} alt="logo" className="size-[60px] mx-auto" />
+              <Image
+                src={"/money.png"}
+                width={60}
+                height={60}
+                alt="logo"
+                className="size-[60px] mx-auto"
+              />
               <h1 className="font-heading font-semibold">Value for Money</h1>
               <p className="font-text">
-                Access exclusive deals, discounts, and perks that maximize the value of your budget.
+                Access exclusive deals, discounts, and perks that maximize the
+                value of your budget.
               </p>
             </div>
 
             {/* Card-3 */}
             <div className="w-2/12 relative top-[-5rem] flex flex-col gap-3 item-center justify-center text-center">
-              <Image src={'/visa.png'} width={60} height={60} alt="logo" className="size-[60px] mx-auto" />
-              <h1 className="font-heading font-semibold">Visa Assistance</h1>
+              <Image
+                src={"/visa.png"}
+                width={60}
+                height={60}
+                alt="logo"
+                className="size-[60px] mx-auto"
+              />
+              <h1 className="font-heading font-semibold">Tour Assistance</h1>
               <p className="font-text">
-                Access hassle-free visa assistance tailored to Indian travelers. Our expert team ensures a smooth application process, guiding you through every step.
+                Access hassle-free Tour assistance tailored to Indian travelers.
+                Our expert team ensures a smooth application process, guiding
+                you through every step.
               </p>
             </div>
           </div>
@@ -119,37 +154,68 @@ export default function WhyChooseUs() {
         </h1>
         {/* Card-1 */}
         <div className="flex flex-col gap-3 item-center justify-center text-center mt-3">
-          <Image src={'/experience-logo.png'} width={60} height={60} alt="logo" className="size-[60px] mx-auto" />
-          <h1 className="font-heading font-semibold">Unforgettable experiences</h1>
+          <Image
+            src={"/experience-logo.png"}
+            width={60}
+            height={60}
+            alt="logo"
+            className="size-[60px] mx-auto"
+          />
+          <h1 className="font-heading font-semibold">
+            Unforgettable experiences
+          </h1>
           <p className="font-text">
-            Crafting personalized itineraries that cater to your unique preferences.
+            Crafting personalized itineraries that cater to your unique
+            preferences.
           </p>
         </div>
 
         {/* Card-2 */}
         <div className="flex flex-col gap-3 item-center justify-center text-center mt-3">
-          <Image src={'/diverse.png'} width={60} height={60} alt="logo" className="size-[60px] mx-auto" />
+          <Image
+            src={"/diverse.png"}
+            width={60}
+            height={60}
+            alt="logo"
+            className="size-[60px] mx-auto"
+          />
           <h1 className="font-heading font-semibold">Diverse Destinations</h1>
           <p className="font-text">
-            Curating exclusive destinations and activities across Incredible India for The Elite Community
+            Curating exclusive destinations and activities across Incredible
+            India for The Elite Community
           </p>
         </div>
 
         {/* Card-3 */}
         <div className="flex flex-col gap-3 item-center justify-center text-center">
-          <Image src={'/money.png'} width={60} height={60} alt="logo" className="size-[60px] mx-auto" />
+          <Image
+            src={"/money.png"}
+            width={60}
+            height={60}
+            alt="logo"
+            className="size-[60px] mx-auto"
+          />
           <h1 className="font-heading font-semibold">Value for Money</h1>
           <p className="font-text">
-            Access exclusive deals, discounts, and perks that maximize the value of your budget.
+            Access exclusive deals, discounts, and perks that maximize the value
+            of your budget.
           </p>
         </div>
 
         {/* Card-4 */}
         <div className="mt-3 flex flex-col gap-3 item-center justify-center text-center">
-          <Image src={'/visa.png'} width={60} height={60} alt="logo" className="size-[60px] mx-auto" />
-          <h1 className="font-heading font-semibold">Visa Assistance</h1>
+          <Image
+            src={"/visa.png"}
+            width={60}
+            height={60}
+            alt="logo"
+            className="size-[60px] mx-auto"
+          />
+          <h1 className="font-heading font-semibold">Tour assistance</h1>
           <p className="font-text">
-            Access hassle-free visa assistance tailored to Indian travelers. Our expert team ensures a smooth application process, guiding you through every step.
+            Access hassle-free Tour assistance tailored to Indian travelers. Our
+            expert team ensures a smooth application process, guiding you
+            through every step.
           </p>
         </div>
 
@@ -157,24 +223,28 @@ export default function WhyChooseUs() {
         <div className="items-center mx-auto w-[74.333%] relative mt-3">
           {/* <Image src={'/services1.png'} width={60} height={60} alt="" className="w-[15.75rem] h-[20.8rem]" /> */}
           <Image
-                src="/services1.png"
-                alt="img1"
-                width={300} // (19.75rem * 16)
-                height={390} // (27.8rem * 16)
-                layout="responsive"
-                objectFit="cover"
-              />
+            src="/services1.png"
+            alt="img1"
+            width={300} // (19.75rem * 16)
+            height={390} // (27.8rem * 16)
+            layout="responsive"
+            objectFit="cover"
+          />
         </div>
 
         <div className="text-center mt-3 space-y-4">
           <p className="font-text">
-            Tailored for Indian Travelers: We understand the preferences and needs of Indian travelers, ensuring a comfortable and enjoyable experience.
+            Tailored for Indian Travelers: We understand the preferences and
+            needs of Indian travelers, ensuring a comfortable and enjoyable
+            experience.
           </p>
           <p className="font-text">
-            Expert Guides: Our knowledgeable guides provide insights into the rich history and culture of Scotland
+            Expert Guides: Our knowledgeable guides provide insights into the
+            rich history and culture of Scotland
           </p>
           <p className="font-text">
-            Hassle-Free Booking: Easy and convenient booking process with dedicated customer support.
+            Hassle-Free Booking: Easy and convenient booking process with
+            dedicated customer support.
           </p>
         </div>
       </div>
