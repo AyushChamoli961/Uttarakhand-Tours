@@ -1,4 +1,4 @@
-import Grandgoa from "@/components/Tour-Details/Grand-Goa/Grandgoa";
+import TourDetails from "@/components/Tour-Details/Grand-Goa/Grandgoa";
 import { prisma } from "@/lib/db";
 import { parse } from "path";
 import { currentProfile } from "@/lib/current-profile";
@@ -25,8 +25,8 @@ const Page = async ({ params }: { params: { tourID: string } }) => {
   if (!tour) {
     return <div>No tour found for given ID</div>;
   }
-
-  return <Grandgoa tour={tour} activeuser={user} />;
+  //@ts-ignore
+  return <TourDetails tour={tour} activeuser={user}   />;
 };
 
 export default Page;

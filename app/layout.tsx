@@ -8,23 +8,23 @@ import Footer from "@/components/Footer/Footer";
 import NavbarWithModal from "@/components/Navbar/NavbarWithModal";
 
 export const metadata: Metadata = {
-  title: "Fly Elite - Discover Your Next Adventure",
+  title: "Uttarakhand Tours - Discover Your Next Adventure",
   description:
-    "Discover your next adventure with Fly Elite. We offer unforgettable tours and unbeatable experiences. Enquire now!",
+    "Discover your next adventure with Uttarakhand Tours. We offer unforgettable tours and unbeatable experiences. Enquire now!",
   keywords:
-    "travel, tours, adventure, Fly Elite, unforgettable tours, unbeatable experience",
-  authors: [{ name: "Fly Elite" }],
+    "travel, tours, adventure, Uttarakhand Tours, unforgettable tours, unbeatable experience",
+  authors: [{ name: "Uttarakhand Tours" }],
   openGraph: {
-    title: "Fly Elite - Discover Your Next Adventure",
+    title: "Uttarakhand Tours - Discover Your Next Adventure",
     description:
-      "Discover your next adventure with Fly Elite. We offer unforgettable tours and unbeatable experiences. Enquire now!",
+      "Discover your next adventure with Uttarakhand Tours. We offer unforgettable tours and unbeatable experiences. Enquire now!",
     url: "https://flyelite.co.in",
     type: "website",
   },
   twitter: {
-    title: "Fly Elite - Discover Your Next Adventure",
+    title: "Uttarakhand Tours - Discover Your Next Adventure",
     description:
-      "Discover your next adventure with Fly Elite. We offer unforgettable tours and unbeatable experiences. Enquire now!",
+      "Discover your next adventure with Uttarakhand Tours. We offer unforgettable tours and unbeatable experiences. Enquire now!",
   },
 };
 

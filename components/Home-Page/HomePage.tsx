@@ -20,7 +20,7 @@ const HomePage = ({ packages}: any) => {
   const [suggestions, setSuggestions] = useState([]);
 
   const allDestinations = Array.from(
-    new Set(packages.flatMap((pack: any) => [pack.city, pack.country]))
+    new Set(packages.flatMap((pack: any) => [pack.title]))
   );
 
   useEffect(() => {
@@ -48,8 +48,7 @@ const HomePage = ({ packages}: any) => {
   const filterPackages = () => {
     return packages.filter((pack: any) => {
       return (
-        pack.city.toLowerCase().includes(destination.toLowerCase()) ||
-        pack.country.toLowerCase().includes(destination.toLowerCase())
+        pack.title.toLowerCase().includes(destination.toLowerCase()) 
       );
     });
   };

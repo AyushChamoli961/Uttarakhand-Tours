@@ -106,7 +106,7 @@ const months: { [key: number]: string } = {
   12: "Dec",
 };
 
-export default function Grandgoa({ tour, activeuser }: TourProps) {
+export default function TourDetails({ tour, activeuser }: TourProps) {
   const position: [number, number] = [51.505, -0.09];
 
   const [person, setPerson] = useState(1);

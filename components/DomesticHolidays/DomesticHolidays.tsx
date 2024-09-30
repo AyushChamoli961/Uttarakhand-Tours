@@ -48,7 +48,7 @@ export default function DomesticHolidays({
   const isNextDisabled = currentDestinationIndex >= packages.length - 1;
 
   return (
-    <div className="mb-8 mt-6">
+    <div id="tours" className="mb-8 mt-6">
       <div className="w-full flex flex-col items-center mt-4">
         <div className="flex items-center justify-center w-full mb-4">
           <h1

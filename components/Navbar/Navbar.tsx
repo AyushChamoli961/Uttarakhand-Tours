@@ -62,7 +62,7 @@ export default function Navbar({ openSignInModal }: any) {
           />
         </Link>
         <ul className=" hidden lg:flex gap-[3rem] lg:gap-[2rem] ">
-          <Link href={"/cruise"}>TOURS</Link>
+          <Link href={"#tours"}>TOURS</Link>
           <Link href={"/hotel"}>HOTEL</Link>
         </ul>
         <div className="text-white lg:flex  hidden space-x-6 ">
